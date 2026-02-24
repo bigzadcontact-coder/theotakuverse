@@ -2,3 +2,10 @@ layout/theme.liquid
 {{ content_for_header }}
 {{ content_for_layout }}
 <head>
+<link rel="icon" href="{{ settings.favicon | image_url: ... }}"
+{{ 'base.css' | asset_url | stylesheet_tag }}
+{{ content_for_header }
+<body>
+{% section 'header' %}
+{{ content_for_layout }}
+{% section 'footer' %}
